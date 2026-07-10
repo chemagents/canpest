@@ -26,11 +26,7 @@ p_final = p_DMPNN * p_CatBoost_RMT95
 DMPNN(rdkit2d) x CatBoost(RMT95)
 ```
 
-Это соответствует исторической ветке Entry 52 `product_rmt95_prev`, которая легла в основу аргумента Entry 53 о снижении FPR.
-
-Важно: в этой папке намеренно не используется `RTE390`.
-
-Поздняя формула Entry 53 для рукописи была:
+Формула для рукописи была такая:
 
 ```text
 p_final = p_DMPNN * sqrt(p_CatBoost_RMT95 * p_CatBoost_RTE390)
