@@ -16,7 +16,7 @@ p_final = p_DMPNN * p_CatBoost_RMT95
 
 Такой product-veto может только уменьшить предсказание DMPNN. Он не может повысить вероятность, если DMPNN сам не видит структурный pesticide-сигнал.
 
-Дополнительно обучается `SVM(RMT95)` на тех же 95 признаках (RMT_RTE_SEL с отобранными 95 признаками). SVM нужен для диагностического CatBoost/SVM benchmark-а residue-level docking signal. SVM не используется в финальной veto-формуле.
+Дополнительно обучается `SVM(RMT_RTE_SEL)` на тех же 95 признаках (RMT_RTE_SEL с отобранными 95 признаками). SVM нужен для диагностического CatBoost/SVM benchmark-а residue-level docking signal. SVM не используется в финальной veto-формуле.
 
 ## Что именно воспроизводится
 
@@ -189,7 +189,7 @@ p_final = p_DMPNN * p_CatBoost_RMT95
 
 ## Самодостаточность папки
 
-Эта папка самодостаточна для воспроизведения logged RMT95-veto эксперимента.
+Эта папка самодостаточна для воспроизведения logged RMT95-veto (RMT_RTE_SEL-veto) эксперимента.
 
 Она содержит:
 
