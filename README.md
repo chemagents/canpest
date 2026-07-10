@@ -11,7 +11,7 @@
 3. Итоговая вероятность считается асимметрично:
 
 ```text
-p_final = p_DMPNN * p_CatBoost_RMT95
+p_final = p_DMPNN * p_CatBoost_RMT_RTE_SEL
 ```
 
 Такой product-veto может только уменьшить предсказание DMPNN. Он не может повысить вероятность, если DMPNN сам не видит структурный pesticide-сигнал.
