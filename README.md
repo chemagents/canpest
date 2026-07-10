@@ -16,7 +16,7 @@ p_final = p_DMPNN * p_CatBoost_RMT95
 
 Такой product-veto может только уменьшить предсказание DMPNN. Он не может повысить вероятность, если DMPNN сам не видит структурный pesticide-сигнал.
 
-Дополнительно обучается `SVM(RMT95)` на тех же 95 признаках. SVM нужен для диагностического CatBoost/SVM benchmark-а residue-level docking signal. SVM не используется в финальной veto-формуле.
+Дополнительно обучается `SVM(RMT95)` на тех же 95 признаках (RMT_RTE_SEL с отобранными 95 признаками). SVM нужен для диагностического CatBoost/SVM benchmark-а residue-level docking signal. SVM не используется в финальной veto-формуле.
 
 ## Что именно воспроизводится
 
@@ -26,16 +26,10 @@ p_final = p_DMPNN * p_CatBoost_RMT95
 DMPNN(rdkit2d) x CatBoost(RMT95)
 ```
 
-Формула для рукописи была такая:
+Здесь воспроизводится формула для одновременного использования модели DMPNN и CatBoost(RMT_RTE_SEL):
 
 ```text
-p_final = p_DMPNN * sqrt(p_CatBoost_RMT95 * p_CatBoost_RTE390)
-```
-
-Она давала `FPR = 4.92%`. Здесь воспроизводится более компактная RMT95-only ветка:
-
-```text
-p_final = p_DMPNN * p_CatBoost_RMT95
+p_final = p_DMPNN * p_CatBoost_RMT_RTE_SEL
 ```
 
 Она даёт `FPR = 5.14%` и показывает почти такое же снижение ложноположительных срабатываний, но только на 95 RMT-отобранных residue features.
