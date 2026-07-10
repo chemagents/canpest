@@ -1,0 +1,28 @@
+{
+  "GLC1": {
+    "gene": "GLC1",
+    "n_residues": 126,
+    "n_labelled": 3171,
+    "lambda_plus": 1.4384083958488054,
+    "n_signal": 14,
+    "q": 0.039735099337748346,
+    "m_opt": 45,
+    "m_opt_expected_from_entry44": 45,
+    "best_PR_AUC": 0.7366068138744017,
+    "top1": "3rif_ser224",
+    "time_seconds": 3.06
+  },
+  "ACHE": {
+    "gene": "ACHE",
+    "n_residues": 132,
+    "n_labelled": 3171,
+    "lambda_plus": 1.4496823751874113,
+    "n_signal": 15,
+    "q": 0.041627246925260174,
+    "m_opt": 50,
+    "m_opt_expected_from_entry44": 50,
+    "best_PR_AUC": 0.7005123555023643,
+    "top1": "32264_val396",
+    "time_seconds": 2.88
+  }
+}

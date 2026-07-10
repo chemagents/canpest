@@ -1,0 +1,30 @@
+{
+  "stage": "stage_0_create_splits",
+  "data_path": "data/data.csv",
+  "run_dir": "pipeline_runs/staged_pipeline",
+  "ligand_id_format": "int64_like_data_csv",
+  "target": "activity",
+  "positive_class": "1 = pesticide/active",
+  "negative_class": "0 = nepesticide/inactive",
+  "n_labeled": 3171,
+  "n_active": 1680,
+  "n_inactive": 1491,
+  "n_splits": 30,
+  "test_size": 0.2,
+  "random_state": 42,
+  "registry_rows": 95130,
+  "summary_rows": 60,
+  "stage_dirs": [
+    "stage_1_mw_test",
+    "stage_2_rmt_filter",
+    "stage_3_qsar_roc_auc",
+    "stage_4_rmt_mie_roc_auc",
+    "stage_5_tsne",
+    "stage_6_and_model"
+  ],
+  "outputs": {
+    "split_registry": "split_registry.csv",
+    "split_summary": "split_summary.csv",
+    "metadata": "metadata.json"
+  }
+}
